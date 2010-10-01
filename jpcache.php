@@ -47,4 +47,3 @@
 
     // Start caching
     jpcache_start();
-?>

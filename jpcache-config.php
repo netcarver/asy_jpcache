@@ -44,4 +44,3 @@
     $JPCACHE_FILEPREFIX   = "jpc_";// Prefix used in the filename. This enables
                                    // us to (more accuratly) recognize jpcache-
                                    // files.
-?>
