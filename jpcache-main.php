@@ -257,7 +257,7 @@
             $GLOBALS["JPCACHE_ON"] = 0;
         }
 
-	if (strpos($_SERVER['REQUEST_URI'],'/file_download/') ||
+	if (false !== strpos($_SERVER['REQUEST_URI'],'/file_download/') ||
 	     (@$_REQUEST['s'] == 'file_download')) 
 	{
             $GLOBALS["JPCACHE_ON"] = 0;
