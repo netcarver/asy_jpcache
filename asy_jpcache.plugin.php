@@ -39,6 +39,7 @@ if (!defined('txpinterface'))
 
 	// Add a new tab to the Content area.
 	if (@txpinterface == 'admin') {
+    add_privs('asy_jpcache','1,2');
 		register_tab("extensions", "asy_jpcache", "jpcache-cleaner");
 		register_callback("asy_jpcachecleaner", "asy_jpcache");
 	}
