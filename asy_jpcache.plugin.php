@@ -47,7 +47,7 @@ if (!defined('txpinterface'))
 	function asy_flush_event($event, $step) {
 		if ( ($event==='article')
 			 && (($step==='create') || ($step==='edit'))
-       && ((count($_POST)==0) || ($_REQUEST['view']!='')) ) return;
+       && ((count($_POST)==0) || (isset($_REQUEST['view']) && $_REQUEST['view']!='')) ) return;
 		elseif (count($_POST)==0) return;
 		$count = asy_flushdir(true);
 	}
