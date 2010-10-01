@@ -4,6 +4,9 @@ Install asy_jpcache.txt in the Admin-Panel, and click on _help_ to view the inst
 
 Version History
 ----------------
+- Add privs to allow admin extension tab to be accessed.
+- Bugfix: remove invalid index: view notice
+- Bugfix: don't cache file downloads
 0.9.8
 - updated installation instructions
 - minor fixes
@@ -12,7 +15,7 @@ Version History
 - added option to enable txp's logging (defaults to off)
 - clean cache on editing links
 - extended help section in admin-plugin
-- added statistics on read-write-ratio in admin-plugin 
+- added statistics on read-write-ratio in admin-plugin
 (only if logging is enabled in jpcache and set to 'all' in Textpattern)
 0.9 (non-public release)
 - added option to skip caching for feeds (defaults to off)
