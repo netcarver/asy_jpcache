@@ -35,7 +35,10 @@ if (!defined('txpinterface'))
 		register_callback("asy_flush_event", "discuss");
 		// We do not have a callback when comments are posted on the front_end
 		// but that's ok, I hacked some magic into jpcache-main.php
+
+		register_callback('asy_public_flush', 'zemcontact.submit'); # Thanks Adam Messinger
 	}
+
 
 	// Add a new tab to the Content area.
 	if (@txpinterface == 'admin') {
@@ -52,6 +55,13 @@ if (!defined('txpinterface'))
 		elseif (count($_POST)==0) return;
 		$count = asy_flushdir(true);
 	}
+
+	// Thanks Adam Messinger
+	function asy_public_flush()
+	{
+		asy_flushdir(true);
+	}
+
 
 	// This is the Callback-Function for the Admin-CP
 	function asy_jpcachecleaner($event, $step) {
