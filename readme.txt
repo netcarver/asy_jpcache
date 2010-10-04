@@ -4,6 +4,7 @@ Install asy_jpcache.txt in the Admin-Panel, and click on _help_ to view the inst
 
 Version History
 ----------------
+- Merge Adam Messinger's aam_zcr_clearcache plugin to allow co-operation with ZCR.
 - Add privs to allow admin extension tab to be accessed.
 - Bugfix: remove invalid index: view notice
 - Bugfix: don't cache file downloads
