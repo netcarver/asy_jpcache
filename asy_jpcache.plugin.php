@@ -12,7 +12,7 @@ $plugin['author'] = 'Sencer Yurdaguel';
 $plugin['author_uri'] = 'http://www.sencer.de/';
 $plugin['description'] = 'JPCache Integration. (This Admin-Plugin is only responsible for cleaning the cache. Click help, to see Installation Instructions.)';
 $plugin['order'] = '5';
-$plugin['type'] = '1';
+$plugin['type'] = '5';
 
 if (!defined('PLUGIN_HAS_PREFS')) define('PLUGIN_HAS_PREFS', 0x0001); // This plugin wants to receive "plugin_prefs.{$plugin['name']}" events
 if (!defined('PLUGIN_LIFECYCLE_NOTIFY')) define('PLUGIN_LIFECYCLE_NOTIFY', 0x0002); // This plugin wants to receive "plugin_lifecycle.{$plugin['name']}" events
