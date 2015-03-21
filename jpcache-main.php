@@ -351,6 +351,8 @@
      */
     function jpcache_end($contents)
     {
+        global $pretext;
+
         jpcache_debug("Callback happened");
 
         // We do a binary comparison of the first two bytes, see
@@ -366,7 +368,8 @@
         if ((connection_aborted() ) || 
             ($GLOBALS["JPCACHE_ON"] == 0) || 
             ($GLOBALS["JPCACHE_TIME"] <= 0) || 
-			( (strlen($contents)/(1+($is_gzipped*2))) < 50 ) )
+            ( (strlen($contents)/(1+($is_gzipped*2))) < 50 ) ||
+            $pretext['status'] != 200 )
         {
   			jpcache_debug("Skipped writing Cachefile. Returned as is.");
             return $contents;
