@@ -37,7 +37,11 @@
     $includedir = dirname(__FILE__);
 
     // Configuration file
-    require "$includedir/jpcache-config.php";
+    if (isset($jpcache_config)) {
+        require $jpcache_config;
+    } else {
+        require "$includedir/jpcache-config.php";
+    }
     
     // Standard functions
     require "$includedir/jpcache-main.php";
