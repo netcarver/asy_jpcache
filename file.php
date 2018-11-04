@@ -84,7 +84,7 @@
            foreach ($headers as $item)
           {
              if (stristr($item, 'Content-Type') !== false)
-	    	   $cachedata["jpcachedata_type"] = substr($item, strpos($item, ': ')+2);
+	    	   $cachedata["jpcachedata_type"] = trim(substr($item, strpos($item, ':')+1));
            }
         } 
 		// Buggy PHP versions just return blank arrays on headers_list()

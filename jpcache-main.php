@@ -193,12 +193,18 @@
 	    }
 
 		// Constructor
-		function TxpLogging() 
+		function __construct() 
 		{
 			if (($GLOBALS['JPCACHE_TXPLOG_DO'] == 0) 
 				|| preg_match('#(\?|\/)(rss|atom)(\=|\/)#',$_SERVER['REQUEST_URI'])) return;
 			$this->do_txp_logging();
 		}
+
+                 // Pre-PHP7 constructor
+                function TxpLogging()
+                {
+                        self::__construct();
+                }
 
 	}	// End TXP-Logging
 
@@ -386,6 +392,7 @@
         $datacrc = crc32($contents);
 
         jpcache_debug("Writing cached data to storage");
+
         // write the cache with the current data
         jpcache_write($gzdata, $datasize, $datacrc, $contents_snippet);
         
